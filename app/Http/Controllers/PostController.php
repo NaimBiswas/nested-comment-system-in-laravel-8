@@ -28,4 +28,8 @@ class PostController extends Controller
         ]);
         return redirect()->back();
     }
+    public function show(Post $post)
+    {
+        return view('post.single', compact('post'));
+    }
 }
