@@ -2,7 +2,8 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <button class="btn btn-md btn-success"><a href="{{ route('post.create') }}">Create Post</a></button>
+        <button class="btn btn-md btn-success mb-2 mt-4"><a style="color: aliceblue"
+                href="{{ route('post.create') }}">Create Post</a></button>
         <table class="table table-bordered">
             <tr>
                 <th>No.</th>
