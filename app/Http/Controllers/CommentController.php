@@ -23,7 +23,7 @@ class CommentController extends Controller
 
 
         $post = Post::find($request->post_id);
-        $post->comments()->save();
+        $post->comments()->save($comment);
         return back();
     }
     public function replyStore(Request $request)

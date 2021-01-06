@@ -29,8 +29,11 @@ class PostController extends Controller
         $post->save();
         return redirect()->back();
     }
-    public function show(Post $post)
+    public function show($slug)
     {
+
+        $post = Post::where('slug', $slug)->first();
+
         return view('post.single', compact('post'));
     }
 }

@@ -5,7 +5,7 @@
     <a href=""
         id="reply"></a>
     <form method="post"
-        action="{{ route('reply.add') }}">
+        action="{{ route('reply.store') }}">
         @csrf
         <div class="form-group">
             <input type="text"
