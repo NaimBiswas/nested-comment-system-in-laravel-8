@@ -25,9 +25,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('post', PostController::class, 'index')->name('post.index');
 
-Route::get('post', PostController::class, 'create')->name('post.create');
+Route::get('post/create', PostController::class, 'create')->name('post.create');
 
-Route::post('post', PostController::class, 'store')->name('post.store');
+Route::post('post/store', PostController::class, 'store')->name('post.store');
 
 Route::get('article/{slug}', PostController::class, 'show')->name('post.show');
 
