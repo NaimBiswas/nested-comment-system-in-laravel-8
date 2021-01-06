@@ -38,7 +38,7 @@ class CommentController extends Controller
 
         $post = Post::find($request->get('post_id'));
 
-        $post->comments()->save();
+        $post->comments()->save($reply);
 
         return back();
     }
