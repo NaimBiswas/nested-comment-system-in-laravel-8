@@ -19,13 +19,14 @@ class PostController extends Controller
     }
     public function store(Request $request)
     {
+
         $validator = $request->validate([
             'title' => 'required|max:100|min:10',
         ]);
-        Post::create([
-            'title' => $request->title,
-            'slug' => Str::slug($request->title),
-        ]);
+        $post =  new Post;
+        $post->title = $request->title;
+        $post->slug = Str::slug($request->title);
+        $post->save();
         return redirect()->back();
     }
     public function show(Post $post)

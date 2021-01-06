@@ -12,7 +12,7 @@
             @foreach ($post as $posts)
             <tr>
                 <td>${{ $posts->id }}</td>
-                <td>${{ $posts->title }}</td>
+                <td>{{ $posts->title }}</td>
                 <td>
                     <a class="btn btn-md btn-info"
                         href="{{ route('post.show', $posts->slug) }}">Read Post</a>
