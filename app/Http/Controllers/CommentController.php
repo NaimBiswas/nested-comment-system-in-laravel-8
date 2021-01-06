@@ -20,8 +20,10 @@ class CommentController extends Controller
         $comment = new Comment();
         $comment->comment = $request->comment;
         $comment->user()->associate($request->user());
+
+
         $post = Post::find($request->post_id);
-        $post->comments()->save($comment);
+        $post->comments()->save();
         return back();
     }
     public function replyStore(Request $request)
@@ -36,7 +38,7 @@ class CommentController extends Controller
 
         $post = Post::find($request->get('post_id'));
 
-        $post->comments()->save($reply);
+        $post->comments()->save();
 
         return back();
     }
